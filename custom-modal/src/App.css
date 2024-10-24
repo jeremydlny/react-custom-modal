@@ -1,0 +1,13 @@
+.modal-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; /* Assurez-vous que le conteneur occupe toute la largeur */
+}
+
+button.modal-open-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
