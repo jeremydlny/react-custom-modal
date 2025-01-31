@@ -1,16 +1,18 @@
 import React from 'react';
-import { Modal } from 'antd'; // Import de la modal d'Ant Design
+import './App.css'; // Assure-toi que les styles sont dans App.css ou un autre fichier CSS
 
-const CustomModal = ({ isOpen, onClose, message }) => {
+const CustomModal = ({ show, message, onClose }) => {
+  if (!show) return null;
+
   return (
-    <Modal
-      open={isOpen} // Utilise 'open' à la place de 'visible' dans Ant Design 5+
-      onCancel={onClose}
-      footer={null}  // Suppression du pied de page pour le styliser selon tes besoins
-      closable={true} // Affiche le bouton de fermeture
-    >
-      <p>{message}</p>
-    </Modal>
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <span className="modal-close" onClick={onClose}>
+          ×
+        </span>
+        <p>{message}</p>
+      </div>
+    </div>
   );
 };
 

@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
-import CustomModal from '@/CustomModal'; 
-import 'antd/dist/reset.css'; 
-import '@/App.css'; 
+import CustomModal from './CustomModal';
+import './App.css';
 
 const App = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
-    <div className="modal-button-container">
-      <button className="modal-open-button" onClick={() => setIsModalOpen(true)}>Open Modal</button>
-      <CustomModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        message="Employee Created!"
-      />
+    <div className="app-container">
+      <button onClick={handleShowModal}>Create Employee</button>
+      <CustomModal show={showModal} message="Employee Created!" onClose={handleCloseModal} />
     </div>
   );
 };

@@ -1,29 +1,42 @@
 {
-  "name": "custom-modal",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "@jeremydlny/custommodal",
+  "version": "1.0.0",
+  "description": "A custom React modal component",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prepare": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "antd": "^5.21.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
+  "keywords": [
+    "react",
+    "modal",
+    "component"
+  ],
+  "author": "Jeremy Delannoy",
+  "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
+    "@eslint/js": "^8.56.0",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.3.3",
-    "eslint": "^9.13.0",
-    "eslint-plugin-react": "^7.37.1",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.13",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
     "globals": "^15.11.0",
-    "vite": "^5.4.9"
+    "vite": "^5.4.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
