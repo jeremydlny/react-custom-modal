@@ -1,9 +1,7 @@
 {
   "name": "@jeremydlny/custommodal",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A custom React modal component",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
   "files": [
     "dist"
   ],
@@ -38,5 +36,14 @@
     "vite": "^5.4.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./styles": "./dist/style.css"
   }
 }
